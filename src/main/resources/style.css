@@ -1,0 +1,53 @@
+AnchorPane{
+    -fx-background-color: #445bc3;
+}
+.product{
+    -fx-background-image: url("img/history.png");
+    -fx-background-position: center;
+    -fx-background-size: 440px 300px;
+}
+.logo{
+    -fx-background-image: url("img/logo.png");
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+}
+.fon{
+    -fx-background-color: white;
+}
+.godPrice{
+    -fx-text-fill: green;
+}
+.btn{
+    -fx-background-color: linear-gradient(orange,#f1ff00);
+    -fx-text-fill: white;
+}
+.btn:hover{
+    -fx-background-color: linear-gradient(gray,#f1ff00);
+}
+#o{
+    -fx-background-image: url("img/o.png");
+    -fx-background-position: center;
+    -fx-background-size: 440px 300px;
+}
+#p {
+    -fx-background-image: url("img/p.png");
+    -fx-background-position: center;
+    -fx-background-size: 440px 300px;
+}
+.btn_select{
+    -fx-background-color:#445bc3;
+    -fx-border-color: orange;
+    -fx-border-image-width: 19px;
+    -fx-text-fill: orange;
+}
+#btn_select:hover{
+    -fx-background-color: yellow;
+    -fx-text-fill: black;
+    -fx-cursor: pointer;
+}
+#close{
+    -fx-background-image: url("img/close.png");
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+}

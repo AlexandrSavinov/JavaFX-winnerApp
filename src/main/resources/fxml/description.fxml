@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="parent" fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1800.0" style="-fx-background-color: gray;" stylesheets="@../description.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DescriptionController">
+   <Pane id="in_pen" fx:id="in_pen" layoutX="312.0" layoutY="-4.0" prefHeight="1032.0" prefWidth="1597.0" styleClass="bcg">
+      <children>
+         <Text layoutX="538.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="НАС ВЫБИРАЮТ:" textAlignment="CENTER" wrappingWidth="462.13671875">
+            <font>
+               <Font name="Impact" size="56.0" />
+            </font>
+         </Text>
+         <Text fill="WHITE" layoutX="539.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="НАС ВЫБИРАЮТ:" textAlignment="CENTER" wrappingWidth="462.13671875">
+            <font>
+               <Font name="Impact" size="56.0" />
+            </font>
+         </Text>
+         <Button fx:id="btn_reviews" layoutX="628.0" layoutY="726.0" mnemonicParsing="false" onAction="#swipeReviews" prefHeight="77.0" prefWidth="254.0" styleClass="btn_reviews" text="Оставить отзыв" textAlignment="CENTER">
+            <font>
+               <Font size="25.0" />
+            </font>
+         </Button>
+         <Text layoutX="542.0" layoutY="174.0" stroke="#f5f5f5" strokeType="OUTSIDE" text="Последние три отзыва о нас" textAlignment="CENTER" wrappingWidth="462.13671875">
+            <font>
+               <Font name="Arial" size="33.0" />
+            </font>
+         </Text>
+      </children></Pane>
+   <Pane id="menu" layoutX="-2.0" prefHeight="1001.0" prefWidth="318.0" style="-fx-background-color: white;">
+      <children>
+         <Button layoutX="77.0" layoutY="317.0" mnemonicParsing="false" onAction="#swipeMain" prefHeight="53.0" prefWidth="178.0" styleClass="btn" text="курсы" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+            <font>
+               <Font name="Impact" size="28.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="DISAPPEAR" />
+            </cursor>
+         </Button>
+         <Button layoutX="75.0" layoutY="426.0" mnemonicParsing="false" onAction="#swipeDescription" prefHeight="53.0" prefWidth="178.0" styleClass="btn" text="отзывы" textOverrun="WORD_ELLIPSIS">
+            <font>
+               <Font name="Impact" size="28.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="DISAPPEAR" />
+            </cursor>
+         </Button>
+         <Button layoutX="75.0" layoutY="532.0" mnemonicParsing="false" onAction="#swipeContact" prefHeight="53.0" prefWidth="178.0" styleClass="btn" text="контакты" textOverrun="WORD_ELLIPSIS">
+            <font>
+               <Font name="Impact" size="28.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="DISAPPEAR" />
+            </cursor>
+         </Button>
+         <Pane layoutX="23.0" layoutY="52.0" prefHeight="121.0" prefWidth="272.0" styleClass="logo" />
+      </children>
+   </Pane>
+
+</AnchorPane>

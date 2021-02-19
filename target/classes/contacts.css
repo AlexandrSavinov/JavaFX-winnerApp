@@ -1,0 +1,28 @@
+#anchorContacts{
+    -fx-background-color:#E3ECFC;
+}
+.bot{
+    -fx-background-color: #445bc3;
+    -fx-text-fill: white;
+}
+.text{
+    -fx-text-fill: white;
+}
+#email{
+    -fx-background-image: url("img/email.png");
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+}
+#telephone{
+    -fx-background-image: url("img/telephone.png");
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+}
+#vk{
+    -fx-background-image: url("img/vk.png");
+    -fx-background-size: 100%;
+    -fx-background-repeat: no-repeat;
+}
+.bot:hover{
+    -fx-background-color: orange;
+}

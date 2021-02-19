@@ -1,0 +1,17 @@
+.bcg{
+    -fx-background-color: linear-gradient(orange,#f1ff00);
+}
+
+.text_in{
+    -fx-text-fill: red;
+}
+.btn_reviews{
+    -fx-background-color: linear-gradient(white,lightgoldenrodyellow);
+    -fx-border-color: orange;
+    -fx-text-fill: rgba(255, 114, 23, 0.96);
+    -fx-font-family: Impact;
+}
+.btn_reviews:hover{
+    -fx-background-color: pink;
+    -fx-font-size: 25px;
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="anchorContacts" fx:id="anchorContacts" prefHeight="1050.0" prefWidth="1941.0" stylesheets="@../contacts.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ContactController">
+    <children>
+      <Pane layoutX="640.0" layoutY="273.0" prefHeight="346.0" prefWidth="347.0" style="-fx-background-color: white;">
+         <children>
+            <Text layoutX="55.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="+79956584306" wrappingWidth="213.314697265625">
+               <font>
+                  <Font name="Arial" size="29.0" />
+               </font>
+            </Text>
+            <Text layoutX="55.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="info@winner-insider.ru" wrappingWidth="262.914794921875">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Text>
+            <Pane layoutY="266.0" prefHeight="80.0" prefWidth="347.0" styleClass="bot">
+               <children>
+                  <Text fill="WHITE" layoutX="16.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="10:00 – 17:00 по МСК" wrappingWidth="320.5146484375">
+                     <font>
+                        <Font name="Arial" size="31.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane id="telephone" layoutX="21.0" layoutY="90.0" prefHeight="27.0" prefWidth="26.0" />
+            <Pane id="email" layoutX="20.0" layoutY="142.0" prefHeight="27.0" prefWidth="26.0" />
+         </children>
+      </Pane>
+        <Pane id="menu" prefHeight="978.0" prefWidth="318.0" style="-fx-background-color: white;">
+            <children>
+                <Button layoutX="77.0" layoutY="317.0" mnemonicParsing="false" onAction="#swipeMain" prefHeight="53.0" prefWidth="178.0" styleClass="btn" text="курсы" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+                    <font>
+                        <Font name="Impact" size="28.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                    </cursor>
+                </Button>
+                <Button layoutX="75.0" layoutY="426.0" mnemonicParsing="false" onAction="#swipeDescription" prefHeight="53.0" prefWidth="178.0" styleClass="btn" text="отзывы" textOverrun="WORD_ELLIPSIS">
+                    <font>
+                        <Font name="Impact" size="28.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                    </cursor>
+                </Button>
+                <Button layoutX="75.0" layoutY="532.0" mnemonicParsing="false" onAction="#swipeContact" prefHeight="53.0" prefWidth="178.0" styleClass="btn" text="контакты" textOverrun="WORD_ELLIPSIS">
+                    <font>
+                        <Font name="Impact" size="28.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                    </cursor>
+                </Button>
+                <Pane layoutX="23.0" layoutY="52.0" prefHeight="121.0" prefWidth="272.0" styleClass="logo" />
+            </children>
+        </Pane>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+        <Text layoutX="930.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="КОНТАКТЫ" wrappingWidth="254.98095703125">
+            <font>
+                <Font name="Impact" size="53.0" />
+            </font>
+        </Text>
+      <Pane layoutX="1072.0" layoutY="273.0" prefHeight="346.0" prefWidth="347.0" style="-fx-background-color: white;">
+         <children>
+            <Text layoutX="17.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ИП &quot;Будницкий А.Е.&quot;" wrappingWidth="253.314697265625">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Text>
+            <Text layoutX="13.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ОГРНИП: 319774600718214" wrappingWidth="333.3148193359375">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Text>
+            <Button layoutX="1.0" layoutY="266.0" mnemonicParsing="false" onAction="#openFile" prefHeight="80.0" prefWidth="347.0" styleClass="bot" text="Политика обработки персональных данных" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Arial" size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Text cache="true" fill="#fa9e11" layoutX="949.0" layoutY="773.0" strokeType="OUTSIDE" strokeWidth="0.0" text="vk.com/win00001">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <Pane id="vk" layoutX="844.0" layoutY="722.0" prefHeight="82.0" prefWidth="74.0" />
+    </children>
+
+</AnchorPane>
