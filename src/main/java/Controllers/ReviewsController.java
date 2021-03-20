@@ -15,13 +15,15 @@ import javafx.scene.text.Text;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.*;
+import java.util.Iterator;
+import java.util.ResourceBundle;
+import java.util.Set;
+
 
 public class ReviewsController implements Initializable {
 
     IsLoginUser iu = new IsLoginUser();
-
-    Set<String> set;
+    UserStore user = new UserStore();
 
     String patchMain ="/fxml/main.fxml";
 
@@ -76,11 +78,13 @@ public class ReviewsController implements Initializable {
         while(rs.next()){
 
             if(rs.getString(1).equals(username) && rs.getString(2).equals(password)){
-                set= new UserStore().addUser(username,password,rs.getString(3));
+                 user.setParam(username,password,rs.getString(3));
 
                 block.setVisible(false);
                 iu.setToggleMake(false);
-                new DBConnect().closeConnectionFromDB();
+                System.out.println("nice login!");
+            }else{
+                System.out.println("Uncorrected login or password!");
             }
 
         }
@@ -100,12 +104,10 @@ public class ReviewsController implements Initializable {
 
             if(!textArea.getText().isEmpty()) {
                 System.out.println("false");
-                Iterator it = set.iterator();
-                String name = (String) it.next();
-                String pas = (String) it.next();
 
-
-                on.insertValuesFromDB(value, textArea.getText(), (String) it.next(), pas);
+                String name = user.getName();
+                String filename = user.getFilename();
+                on.insertValuesFromDB(value, textArea.getText(), filename, name);
                 on.closeConnectionFromDB();
             }else{
                 System.out.println("TextArea is EMPTY!!!");

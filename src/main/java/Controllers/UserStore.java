@@ -1,21 +1,36 @@
 package Controllers;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class UserStore {
+    private static String name;
+    private static String password;
+    private static String filename;
 
-    private Set<String> userList;
+    public UserStore(String name, String password, String filename) {
+        this.name = name;
+        this.password = password;
+        this.filename = filename;
+    }
 
     public UserStore() {
-        userList = new HashSet<>();
     }
 
-    public Set<String> addUser(String username, String password,String filename){
-        userList.add(username);
-        userList.add(password);
-        userList.add(filename);
-        return userList;
+    public String getName() {
+        return name;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setParam(String username, String password, String filename) {
+        this.name = username;
+        this.password = password;
+        this.filename = filename;
+    }
 }

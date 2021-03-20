@@ -16,4 +16,5 @@ public class SwipeScene {
         }
         rootPane.getChildren().setAll(pane);
     }
+
 }
