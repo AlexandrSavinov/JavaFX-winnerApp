@@ -1,7 +1,5 @@
 package Controllers;
 
-import java.util.*;
-
 public class UserStore {
     private static String name;
     private static String password;

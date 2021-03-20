@@ -3,7 +3,6 @@ package Controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -15,9 +14,7 @@ import javafx.scene.text.Text;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Iterator;
 import java.util.ResourceBundle;
-import java.util.Set;
 
 
 public class ReviewsController implements Initializable {
@@ -29,11 +26,6 @@ public class ReviewsController implements Initializable {
 
     @FXML
     private AnchorPane info;
-
-    @FXML
-    private Button button_rev;
-    @FXML
-    private Button login;
 
     @FXML
     private TextArea textArea;
@@ -52,6 +44,9 @@ public class ReviewsController implements Initializable {
 
     @FXML
     private Text Make;
+    @FXML
+    private Text textEror;
+
 
     String value = "5";
 
@@ -78,12 +73,12 @@ public class ReviewsController implements Initializable {
         while(rs.next()){
 
             if(rs.getString(1).equals(username) && rs.getString(2).equals(password)){
-                 user.setParam(username,password,rs.getString(3));
-
+                user.setParam(username,password,rs.getString(3));
                 block.setVisible(false);
                 iu.setToggleMake(false);
                 System.out.println("nice login!");
             }else{
+                textEror.setVisible(true);
                 System.out.println("Uncorrected login or password!");
             }
 
@@ -97,6 +92,7 @@ public class ReviewsController implements Initializable {
     public void FadeIn(ActionEvent actionEvent) throws SQLException {
         if (!block.isVisible() && iu.isToggleMake()) {
             block.setVisible(true);
+            textEror.setVisible(false);
         }
 
 

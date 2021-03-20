@@ -10,6 +10,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ReviewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ReviewsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SwipeScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SwipeScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UserStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UserStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/reviews.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/reviews.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DBConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DBConnect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DescriptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DescriptionController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" afterDir="false" />
@@ -152,7 +153,7 @@
       <workItem from="1613327628429" duration="2939000" />
       <workItem from="1613415966475" duration="101000" />
       <workItem from="1615497144752" duration="289000" />
-      <workItem from="1616264603458" duration="5619000" />
+      <workItem from="1616264603458" duration="6524000" />
     </task>
     <servers />
   </component>

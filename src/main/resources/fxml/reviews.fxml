@@ -50,7 +50,7 @@
                   <Font size="28.0" />
                </font>
             </TextField>
-            <Button fx:id="login" layoutX="346.0" layoutY="520.0" mnemonicParsing="false" onAction="#getTextLogin" prefHeight="63.0" prefWidth="149.0" text="Войти">
+            <Button fx:id="login" layoutX="343.0" layoutY="547.0" mnemonicParsing="false" onAction="#getTextLogin" prefHeight="63.0" prefWidth="149.0" text="Войти">
                <font>
                   <Font size="27.0" />
                </font>
@@ -58,6 +58,11 @@
             <Text layoutX="258.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Войдите чтобы оставить отзыв" textAlignment="CENTER" wrappingWidth="326.546142578125">
                <font>
                   <Font name="Impact" size="31.0" />
+               </font>
+            </Text>
+            <Text fx:id="textEror" fill="RED" layoutX="232.0" layoutY="484.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Проверьте правильность введеных данных!" textAlignment="CENTER" wrappingWidth="372.0001220703125">
+               <font>
+                  <Font size="26.0" />
                </font>
             </Text>
          </children>
