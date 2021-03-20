@@ -10,9 +10,7 @@ public class DBConnect {
         final static String password = "qwerty";
 
 
-        private static final AtomicInteger count = new AtomicInteger(61);
-
-        public Connection createConnect()  {
+        public static Connection createConnect()  {
                 try{
                         Class.forName("org.postgresql.Driver");
                         return DriverManager.getConnection(url,username,password);
@@ -42,7 +40,7 @@ public class DBConnect {
                 PreparedStatement ps = createConnect().prepareStatement("" +
                         "INSERT INTO message (id,tag, text, filename,author) VALUES (?,?,?,?,?)");
 
-                ps.setLong(1,(long) count.incrementAndGet());
+                ps.setLong(1,getLastID()+1);
                 ps.setString(2,tag);
                 ps.setString(3,text);
                 ps.setString(4,filename);
@@ -50,15 +48,17 @@ public class DBConnect {
                 ps.execute();
         }
 
-        public Long getLastID() throws SQLException {
-               ResultSet rs = getListDB("Select id from message");
+        public static Long getLastID() throws SQLException {
+
+                Statement st = createConnect().createStatement();
+               ResultSet rs = st.executeQuery("Select id from message ORDER BY id desc ");
                Long id = null;
                while (rs.next()){
                        id = rs.getLong(1);
                        return id;
 
                }
-
+                System.out.println("Current id="+id);
                return id;
         }
 
