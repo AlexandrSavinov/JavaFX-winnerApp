@@ -1,6 +1,7 @@
 package Controllers;
 
 
+import Controllers.inerface.SwipeMethodToScene;
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,8 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class MainController implements Initializable {
-
+public class MainController implements Initializable, SwipeMethodToScene {
     @FXML
     private AnchorPane rootPane;
     @FXML
@@ -26,20 +26,23 @@ public class MainController implements Initializable {
     @FXML
     private WebView WebV;
 
-    String patchDescp ="/fxml/description.fxml";
-    String patchContact ="/fxml/contacts.fxml";
-    String patchMain ="/fxml/main.fxml";
-
     @FXML
     public void swipeScen() {
             System.out.println("swipePage");
     }
 
+    @Override
+    public void swipeMain(ActionEvent event) throws IOException {
+
+    }
+
+    @Override
     @FXML
     public void swipeDescription(ActionEvent event) throws IOException {
         new SwipeScene(patchDescp,rootPane);
     }
 
+    @Override
     @FXML
     public void swipeContact(ActionEvent event) throws IOException {
         new SwipeScene(patchContact,rootPane);

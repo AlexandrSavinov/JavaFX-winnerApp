@@ -1,5 +1,6 @@
 package Controllers;
 
+import Controllers.inerface.SwipeMethodToScene;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,32 +11,30 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class ContactController implements Initializable {
+public class ContactController implements Initializable, SwipeMethodToScene {
 
     @FXML
     private AnchorPane anchorContacts;
     @FXML
     private Label labelPolit;
 
-    String patchDescp ="/fxml/description.fxml";
-    String patchInfo ="/fxml/info.fxml";
-    String patchMain ="/fxml/main.fxml";
-
+    @Override
     @FXML
-    public void swipeMain(ActionEvent event) {
+    public void swipeMain(ActionEvent event) throws IOException {
         SwipeScene swipeScene = new SwipeScene(patchMain,anchorContacts);
         System.out.println("main");
     }
 
+    @Override
     @FXML
     public void swipeDescription(ActionEvent event) throws IOException {
         SwipeScene swp = new SwipeScene(patchDescp,anchorContacts);
         System.out.println("decsp");
     }
 
+    @Override
     @FXML
-    public void swipeContact() {
-//        SwipeScene swp = new SwipeScene(patchContact,anchorContacts);
+    public void swipeContact(ActionEvent event) throws IOException {
         System.out.println("contact");
     }
 

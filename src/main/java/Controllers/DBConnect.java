@@ -3,11 +3,23 @@ package Controllers;
 import java.sql.*;
 
 public class DBConnect {
+        //закрытый констркутор для реализации паттерна Singelton
+        private DBConnect(){}
 
-        final static String url = "jdbc:postgresql://localhost/znanya3";
-        final static String username = "postgres";
-        final static String password = "qwerty";
+        // Данные для подключения к БД
+        private final static String url = "jdbc:postgresql://localhost/znanya3";
+        private final static String username = "postgres";
+        private final static String password = "qwerty";
 
+        private static DBConnect dbConnect;
+
+        //реализация паттернна Singelton
+        public static synchronized DBConnect getDBConnet(){
+                if(dbConnect == null){
+                        dbConnect = new DBConnect();
+                }
+                return dbConnect;
+        }
 
         public static Connection createConnect()  {
                 try{
@@ -35,16 +47,15 @@ public class DBConnect {
 
 
 
-        public void insertValuesFromDB(String tag,String text,String filename,String name) throws SQLException {
+        public boolean insertValuesFromDB(String tag,String text,String filename,String name) throws SQLException {
                 PreparedStatement ps = createConnect().prepareStatement("" +
                         "INSERT INTO message (id,tag, text, filename,author) VALUES (?,?,?,?,?)");
-
                 ps.setLong(1,getLastID()+1);
                 ps.setString(2,tag);
                 ps.setString(3,text);
                 ps.setString(4,filename);
                 ps.setString(5,name);
-                ps.execute();
+                return ps.execute();
         }
 
         public static Long getLastID() throws SQLException {

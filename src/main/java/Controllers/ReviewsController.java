@@ -1,5 +1,6 @@
 package Controllers;
 
+import Controllers.inerface.SwipeMethodToScene;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -11,18 +12,17 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 
-public class ReviewsController implements Initializable {
+public class ReviewsController implements Initializable, SwipeMethodToScene {
 
     IsLoginUser iu = new IsLoginUser();
     UserStore user = new UserStore();
-
-    String patchMain ="/fxml/main.fxml";
 
     @FXML
     private AnchorPane info;
@@ -46,8 +46,10 @@ public class ReviewsController implements Initializable {
     private Text Make;
     @FXML
     private Text textEror;
+    @FXML
+    private Text sendReviews;
 
-
+    //Стандартное значение для незаполненой шкалы оценки.
     String value = "5";
 
     @FXML
@@ -56,10 +58,21 @@ public class ReviewsController implements Initializable {
         Make.setText(value);
     }
 
+    @Override
     @FXML
-    public void swipeMain() {
-        SwipeScene swp = new SwipeScene(patchMain,info);
+    public void swipeMain(ActionEvent event) {
+        SwipeScene swp = new SwipeScene(patchDescp,info);
         System.out.println("swipePage");
+    }
+
+    @Override
+    public void swipeDescription(ActionEvent event) throws IOException {
+
+    }
+
+    @Override
+    public void swipeContact(ActionEvent event) throws IOException {
+
     }
 
 
@@ -69,7 +82,7 @@ public class ReviewsController implements Initializable {
         String password = textPassword.getText();
 
 
-        ResultSet rs = new DBConnect().getListDB("Select username,password,filename From usr");
+        ResultSet rs = DBConnect.getDBConnet().getListDB("Select username,password,filename From usr");
         while(rs.next()){
 
             if(rs.getString(1).equals(username) && rs.getString(2).equals(password)){
@@ -85,7 +98,6 @@ public class ReviewsController implements Initializable {
         }
 
     }
-    DBConnect on = new DBConnect();
 
 
     @FXML
@@ -99,12 +111,15 @@ public class ReviewsController implements Initializable {
         if(!iu.isToggleMake()){
 
             if(!textArea.getText().isEmpty()) {
-                System.out.println("false");
-
                 String name = user.getName();
                 String filename = user.getFilename();
-                on.insertValuesFromDB(value, textArea.getText(), filename, name);
-                on.closeConnectionFromDB();
+                boolean isSendReviews = DBConnect.getDBConnet().insertValuesFromDB(value, textArea.getText(), filename, name);
+
+                if(!isSendReviews){
+                    sendReviews.setVisible(true);
+                }
+
+                DBConnect.getDBConnet().closeConnectionFromDB();
             }else{
                 System.out.println("TextArea is EMPTY!!!");
             }
@@ -115,6 +130,7 @@ public class ReviewsController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        sendReviews.setVisible(false);
         block.setVisible(false);
     }
 

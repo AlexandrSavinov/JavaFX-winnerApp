@@ -1,5 +1,6 @@
 package Controllers;
 
+import Controllers.inerface.SwipeMethodToScene;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,36 +14,35 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
-public class DescriptionController implements Initializable {
+public class DescriptionController implements Initializable, SwipeMethodToScene {
 
     @FXML
     private AnchorPane parent;
     @FXML
     private Pane in_pen;
-   @FXML
+    @FXML
     private Button btn_reviews;
 
-    String patchDescp ="/fxml/description.fxml";
-    String patchContact ="/fxml/contacts.fxml";
-    String patchReviews ="/fxml/reviews.fxml";
-    String patchMain ="/fxml/main.fxml";
-
+    @Override
     @FXML
-    public void swipeMain() {
+    public void swipeMain(ActionEvent event) throws IOException {
         SwipeScene swp = new SwipeScene(patchMain,parent);
         System.out.println("swipePage");
     }
 
+    @Override
     @FXML
     public void swipeDescription(ActionEvent event) throws IOException { ;
         System.out.println("decsp");
     }
 
+    @Override
     @FXML
-    public void swipeContact() {
+    public void swipeContact(ActionEvent event) throws IOException {
         SwipeScene swp = new SwipeScene(patchContact,parent);
         System.out.println("contact");
     }
+
     @FXML
     public void swipeReviews(){
         SwipeScene swp = new SwipeScene(patchReviews,parent);
@@ -54,7 +54,7 @@ public class DescriptionController implements Initializable {
         int scope=0;
 
         try {
-            ResultSet rs = new DBConnect().getListDB("SELECT * FROM message ORDER BY ID DESC LIMIT 3");
+            ResultSet rs = DBConnect.getDBConnet().getListDB("SELECT * FROM message ORDER BY ID DESC LIMIT 3");
             while (rs.next()) {
                 RenderReviews.RenderPaneReviews(in_pen,rs,scope);
                 scope+=500;

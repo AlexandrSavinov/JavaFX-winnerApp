@@ -38,7 +38,12 @@
          </font>
       </Text>
       <Slider fx:id="srollPanel" layoutX="736.0" layoutY="518.0" majorTickUnit="5.0" max="5.0" min="1.0" minorTickCount="1" onDragDetected="#getMark" prefHeight="124.0" prefWidth="520.0" showTickLabels="true" showTickMarks="true" />
-      <Pane id="block" fx:id="block" layoutX="602.0" layoutY="70.0" prefHeight="722.0" prefWidth="826.0" style="-fx-background-color: white;">
+      <Text fx:id="sendReviews" fill="#80ff8b" layoutX="807.0" layoutY="670.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Отзыв отправлен!" textAlignment="CENTER" wrappingWidth="372.0001220703125">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <Pane id="block" fx:id="block" layoutX="593.0" layoutY="66.0" prefHeight="722.0" prefWidth="826.0" style="-fx-background-color: white;">
          <children>
             <TextField fx:id="textLogin" layoutX="241.0" layoutY="251.0" prefHeight="63.0" prefWidth="360.0" promptText="Логин" styleClass="input">
                <font>

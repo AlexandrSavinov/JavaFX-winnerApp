@@ -2,19 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2605d38a-3d09-44fc-ba2f-ab48d8bd785d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/RenderReviews.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/inerface/SwipeMethodToScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ContactController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DBConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DBConnect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/DescriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/DescriptionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ReviewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ReviewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/SwipeScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/SwipeScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/UserStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/UserStore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/reviews.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/reviews.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DBConnect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DBConnect.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/DescriptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/DescriptionController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ReviewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ReviewsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/UserStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/UserStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/winnerSider.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/reviews.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/reviews.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +46,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -153,7 +156,10 @@
       <workItem from="1613327628429" duration="2939000" />
       <workItem from="1613415966475" duration="101000" />
       <workItem from="1615497144752" duration="289000" />
-      <workItem from="1616264603458" duration="6524000" />
+      <workItem from="1616264603458" duration="6854000" />
+      <workItem from="1616589704639" duration="290000" />
+      <workItem from="1616590125638" duration="41000" />
+      <workItem from="1620925291320" duration="5276000" />
     </task>
     <servers />
   </component>
